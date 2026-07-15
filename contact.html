@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Shoshin</title>
+<meta name="description" content="Get in touch with Shoshin. Questions, support, press and partnerships — we reply within a morning." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css?v=9" />
+<script>document.documentElement.className += " js-reveal";</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="sh-sumi" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.016 0.024" numOctaves="3" seed="7" result="n" />
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="18" xChannelSelector="R" yChannelSelector="G" />
+  </filter>
+</defs></svg>
+
+<!-- NAV -->
+<nav class="sh-nav">
+  <div class="sh-nav__inner">
+    <a class="sh-logo" href="index.html" aria-label="Shoshin home">
+      <svg class="sh-logo__mark" width="26" height="28" viewBox="0 0 26 28" fill="none" aria-hidden="true">
+        <rect class="sh-logo__bar-1" x="0" y="16" width="6" height="12" rx="1" /><rect class="sh-logo__bar-2" x="10" y="9" width="6" height="19" rx="1" /><rect class="sh-logo__bar-3" x="20" y="0" width="6" height="28" rx="1" />
+      </svg>
+      <span class="sh-logo__word">Shoshin</span><span class="sh-logo__jp">初心</span>
+    </a>
+    <div class="sh-nav__links">
+      <a class="sh-nav__link" href="philosophy.html">Philosophy</a>
+      <a class="sh-nav__link" href="how-it-works.html">How It Works</a>
+      <a class="sh-nav__link" href="challenges.html">Challenges</a>
+      <a class="sh-nav__link active" href="contact.html">Contact</a>
+      <span class="sh-nav__cta"><a class="sh-btn sh-btn--primary" href="download.html">Download</a></span>
+    </div>
+    <button class="sh-nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="sh-drawer">
+  <a href="philosophy.html"><span class="sh-drawer__no">01</span> Philosophy</a>
+  <a href="how-it-works.html"><span class="sh-drawer__no">02</span> How It Works</a>
+  <a href="challenges.html"><span class="sh-drawer__no">03</span> Challenges</a>
+  <a href="contact.html"><span class="sh-drawer__no">04</span> Contact</a>
+  <a class="sh-btn sh-btn--accent sh-btn--block" href="download.html">Download Shoshin</a>
+</div>
+
+<!-- HERO -->
+<header class="sh-phero sh-dark">
+  <svg class="sh-phero__enso sh-enso sh-enso--draw sh-reveal" viewBox="0 0 400 400" aria-hidden="true">
+    <path class="sh-enso__path" d="M312 96 a165 165 0 1 0 30 96" />
+  </svg>
+  <div class="sh-wrap sh-phero__inner">
+    <div class="sh-runhead sh-reveal"><span>CONTACT</span><span>SAY GOOD MORNING</span></div>
+    <div style="margin-top:48px">
+      <span class="sh-kicker sh-kicker--accent sh-reveal">Get in Touch</span>
+      <h1 class="sh-display sh-d-hero sh-phero__title sh-reveal" data-delay="1">Say good<br />morning.</h1>
+      <p class="sh-lead sh-phero__lead sh-reveal" data-delay="2">A question, a bug, a story about the morning you finally crossed the bridge — we want to hear it. One small team, real replies, usually before 9am.</p>
+    </div>
+  </div>
+</header>
+
+<!-- CONTACT GRID -->
+<section class="sh-section">
+  <div class="sh-wrap">
+    <div class="sh-runhead sh-reveal"><span>01 — WRITE TO US</span><span>WE READ EVERY NOTE</span></div>
+    <div class="sh-contact" style="margin-top:56px">
+      <!-- FORM -->
+      <form class="sh-form sh-reveal" data-contact-form novalidate>
+        <div class="sh-form__row">
+          <div class="sh-fieldset">
+            <label class="sh-label" for="cf-name">Your name</label>
+            <input class="sh-input" id="cf-name" name="name" type="text" placeholder="Aarav M." required />
+          </div>
+          <div class="sh-fieldset">
+            <label class="sh-label" for="cf-email">Email</label>
+            <input class="sh-input" id="cf-email" name="email" type="email" placeholder="you@morning.com" required />
+          </div>
+        </div>
+        <div class="sh-fieldset">
+          <label class="sh-label" for="cf-topic">What's this about?</label>
+          <div class="sh-select">
+            <select class="sh-input" id="cf-topic" name="topic">
+              <option>A question about the practice</option>
+              <option>Help &amp; support</option>
+              <option>A bug or feedback</option>
+              <option>Press &amp; partnerships</option>
+              <option>Just saying hello</option>
+            </select>
+            <span class="sh-select__caret" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="sh-fieldset">
+          <label class="sh-label" for="cf-msg">Your message</label>
+          <textarea class="sh-input sh-input--area" id="cf-msg" name="message" rows="5" placeholder="Tell us what's on your mind…" required></textarea>
+        </div>
+        <div class="sh-form__foot">
+          <button class="sh-btn sh-btn--accent" type="submit">Send message</button>
+          <span class="sh-kicker">We reply within a morning or two.</span>
+        </div>
+      </form>
+
+      <!-- CHANNELS -->
+      <aside class="sh-channels sh-reveal" data-delay="1">
+        <div class="sh-channel">
+          <span class="sh-kicker">General &amp; support</span>
+          <a class="sh-channel__addr" href="mailto:hello@shoshin.app">hello@shoshin.app</a>
+          <p class="sh-muted">Questions about the bridge, your account, or a morning that won't behave.</p>
+        </div>
+        <div class="sh-channel">
+          <span class="sh-kicker">Press &amp; partnerships</span>
+          <a class="sh-channel__addr" href="mailto:press@shoshin.app">press@shoshin.app</a>
+          <p class="sh-muted">Writing about morning discipline, or building something alongside us.</p>
+        </div>
+        <div class="sh-channel">
+          <span class="sh-kicker">Response window</span>
+          <span class="sh-channel__hours">Mon–Sat · replies by 9am IST</span>
+          <p class="sh-muted">We answer when we wake — which, fittingly, is early.</p>
+        </div>
+        <div class="sh-channel sh-channel--seal">
+          <span class="sh-hanko" aria-hidden="true">初</span>
+          <p class="sh-muted">Built by a small team that crosses the same bridge every morning.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sh-section sh-dark">
+  <div class="sh-wrap">
+    <div class="sh-runhead sh-reveal"><span>02 — BEFORE YOU WRITE</span><span>QUICK ANSWERS</span></div>
+    <div class="sh-stack__head sh-reveal" style="max-width:720px;margin:48px 0 36px">
+      <h2 class="sh-display sh-d-1">The questions<br />we hear most.</h2>
+    </div>
+    <div class="sh-faq">
+      <div class="sh-faq__item">
+        <button class="sh-faq__q" aria-expanded="false">Is Shoshin free?<span class="sh-faq__icon" aria-hidden="true"></span></button>
+        <div class="sh-faq__a"><div class="sh-faq__a-inner sh-muted">Yes — Shoshin is free to begin, on both iOS and Android. There are no ads. You can cross the bridge every morning without paying a cent.</div></div>
+      </div>
+      <div class="sh-faq__item">
+        <button class="sh-faq__q" aria-expanded="false">Does it really block the snooze?<span class="sh-faq__icon" aria-hidden="true"></span></button>
+        <div class="sh-faq__a"><div class="sh-faq__a-inner sh-muted">It does. The alarm holds until you solve a short arithmetic problem — there's no swipe to dismiss and no snooze to find until your mind is genuinely awake.</div></div>
+      </div>
+      <div class="sh-faq__item">
+        <button class="sh-faq__q" aria-expanded="false">What happens to my photo proof?<span class="sh-faq__icon" aria-hidden="true"></span></button>
+        <div class="sh-faq__a"><div class="sh-faq__a-inner sh-muted">It never leaves your device. It's never uploaded, scored, or shown to anyone. The photo is a promise you keep to yourself, not a post for us.</div></div>
+      </div>
+      <div class="sh-faq__item">
+        <button class="sh-faq__q" aria-expanded="false">Which platforms is it on?<span class="sh-faq__icon" aria-hidden="true"></span></button>
+        <div class="sh-faq__a"><div class="sh-faq__a-inner sh-muted">iPhone and Android, today. The alarm runs reliably in the background and survives a restart, so it's there when the morning comes.</div></div>
+      </div>
+      <div class="sh-faq__item">
+        <button class="sh-faq__q" aria-expanded="false">I broke my streak — is it over?<span class="sh-faq__icon" aria-hidden="true"></span></button>
+        <div class="sh-faq__a"><div class="sh-faq__a-inner sh-muted">Never. A missed morning is just a missed morning. Shoshin shows the gap honestly and invites you to begin again — because beginning again is the whole practice.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI CTA -->
+<section class="sh-section sh-section--tight sh-center">
+  <div class="sh-wrap">
+    <h2 class="sh-display sh-d-2 sh-reveal">Ready to begin instead?</h2>
+    <p class="sh-lead sh-mx-auto sh-reveal" data-delay="1" style="margin-top:14px">The fastest answer to most questions is your first morning.</p>
+    <div class="sh-cta-row sh-reveal" data-delay="2" style="justify-content:center;margin-top:28px">
+      <a class="sh-btn sh-btn--accent" href="download.html">Download for iOS</a>
+      <a class="sh-btn sh-btn--ghost" href="download.html">Download for Android</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sh-footer">
+  <div class="sh-wrap">
+    <div class="sh-footer__grid">
+      <div>
+        <a class="sh-logo" href="index.html">
+          <svg class="sh-logo__mark" width="26" height="28" viewBox="0 0 26 28" fill="none" aria-hidden="true">
+            <rect class="sh-logo__bar-1" x="0" y="16" width="6" height="12" rx="1" /><rect class="sh-logo__bar-2" x="10" y="9" width="6" height="19" rx="1" /><rect class="sh-logo__bar-3" x="20" y="0" width="6" height="28" rx="1" />
+          </svg>
+          <span class="sh-logo__word" style="color:var(--sh-paper)">Shoshin</span>
+        </a>
+        <p class="sh-footer__tag">Beginner's mind. Every morning. A morning habit activation practice rooted in Zen.</p>
+        <div class="sh-badges">
+          <a class="sh-badge" href="download.html">
+            <svg width="20" height="22" viewBox="0 0 16 18" fill="#F4F1E9" aria-hidden="true"><path d="M13.3 9.6c0-1.7 1.4-2.5 1.4-2.6-.8-1.1-2-1.3-2.4-1.3-1-.1-2 .6-2.5.6s-1.3-.6-2.2-.6c-1.1 0-2.2.7-2.7 1.7-1.2 2-.3 5 .8 6.6.6.8 1.2 1.7 2.1 1.7.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5 1.5-.8 2-1.6c.7-.9.9-1.8.9-1.9 0 0-1.8-.7-1.8-2.8zM11.7 4.3c.5-.6.8-1.4.7-2.3-.7 0-1.5.5-2 1.1-.4.5-.8 1.3-.7 2.1.8.1 1.6-.4 2-.9z"/></svg>
+            <span class="sh-badge__txt"><small>Download on the</small><span>App Store</span></span>
+          </a>
+          <a class="sh-badge" href="download.html">
+            <svg width="19" height="21" viewBox="0 0 15 17" fill="#F4F1E9" aria-hidden="true"><path d="M.7.6C.5.8.4 1.1.4 1.5v14c0 .4.1.7.3.9l8-7.9-8-7.9zM10.9 6.5 2.6.9l7.4 4.3.9 1.3zM13.7 7.4c.5.3.5 1.2 0 1.5l-1.8 1-1.6-1.6 1.6-1.6 1.8.7zM2.6 16.1l8.3-5.6-1-1.3-7.3 6.9z"/></svg>
+            <span class="sh-badge__txt"><small>Get it on</small><span>Google Play</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="sh-footer__col">
+        <h4>Practice</h4>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="contact.html">Contact</a>
+        <a href="download.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="sh-footer__col">
+        <h4>Shoshin</h4>
+        <span class="sh-footer__jp">初心</span>
+        <p class="sh-footer__tag" style="margin-top:16px">Beginner's mind,<br />every morning.</p>
+      </div>
+    </div>
+    <div class="sh-footer__bottom">
+      <span>© <span data-year>2025</span> SHOSHIN — BUILT WITH DISCIPLINE</span>
+      <span class="sh-flex" style="gap:22px"><a href="download.html">PRIVACY</a><a href="contact.html">CONTACT</a></span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .sh-contact { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 64px; align-items: start; }
+
+  /* FORM */
+  .sh-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .sh-fieldset { display: flex; flex-direction: column; margin-bottom: 22px; }
+  .sh-label { font-family: var(--sh-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sh-fog); margin-bottom: 10px; }
+  .sh-input { font-family: var(--sh-sans); font-size: 16px; color: var(--sh-ink); background: var(--sh-surface);
+    border: 1px solid var(--sh-line); border-radius: var(--sh-r); padding: 14px 16px; width: 100%;
+    transition: border-color .3s var(--sh-ease), box-shadow .3s var(--sh-ease); }
+  .sh-input::placeholder { color: var(--sh-fog-2); }
+  .sh-input:focus { outline: none; border-color: var(--sh-ink); box-shadow: 0 0 0 3px rgba(26,23,20,0.06); }
+  .sh-input--area { resize: vertical; min-height: 130px; line-height: 1.55; }
+  .sh-select { position: relative; }
+  .sh-select select { appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 40px; }
+  .sh-select__caret { position: absolute; right: 16px; top: 50%; width: 9px; height: 9px; border-right: 1.5px solid var(--sh-fog);
+    border-bottom: 1.5px solid var(--sh-fog); transform: translateY(-65%) rotate(45deg); pointer-events: none; }
+  .sh-form__foot { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 6px; }
+
+  /* CONFIRMATION (injected) */
+  .sh-contact__done { border: 1px solid var(--sh-line); border-radius: var(--sh-r-lg); padding: 48px 40px; background: var(--sh-surface); }
+  .sh-contact__done .sh-display { margin: 18px 0 12px; }
+  .sh-contact__done p { max-width: 46ch; }
+  .sh-contact__seal { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px;
+    border: 2px solid var(--sh-accent); border-radius: 6px; color: var(--sh-accent); font-family: var(--sh-display); font-weight: 700; font-size: 26px; }
+
+  /* CHANNELS */
+  .sh-channels { display: flex; flex-direction: column; border-top: 1px solid var(--sh-line); }
+  .sh-channel { padding: 24px 0; border-bottom: 1px solid var(--sh-line); display: flex; flex-direction: column; gap: 8px; }
+  .sh-channel__addr { font-family: var(--sh-display); font-size: 24px; font-weight: 600; color: var(--sh-ink);
+    transition: color .25s var(--sh-ease); }
+  .sh-channel__addr:hover { color: var(--sh-accent); }
+  .sh-channel__hours { font-family: var(--sh-display); font-size: 20px; font-weight: 600; color: var(--sh-ink); }
+  .sh-channel p { font-size: 14px; max-width: 36ch; }
+  .sh-channel--seal { flex-direction: row; align-items: center; gap: 18px; border-bottom: none; padding-bottom: 0; }
+  .sh-channel--seal p { font-size: 14px; }
+
+  @media (max-width: 900px) {
+    .sh-contact { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 600px) {
+    .sh-form__row { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+
+<script src="shoshin.js?v=5"></script>
+</body>
+</html>

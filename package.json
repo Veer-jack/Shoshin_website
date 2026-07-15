@@ -1,0 +1,11 @@
+{
+  "name": "shoshin-website",
+  "version": "1.0.0",
+  "description": "Shoshin Morning Habit App - Landing Page",
+  "scripts": {
+    "start": "npx serve . -p $PORT --single"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
