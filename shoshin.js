@@ -251,11 +251,11 @@
     dock.setAttribute("role", "region");
     dock.setAttribute("aria-label", "Download Shoshin");
     dock.innerHTML =
-      '<span class="sh-dock__pitch"><b>Begin tomorrow morning.</b><span>Free to start · iOS &amp; Android</span></span>' +
+      '<span class="sh-dock__pitch"><b>Begin tomorrow morning.</b><span>Free to start · Android now, iOS coming soon</span></span>' +
       '<span class="sh-dock__div" aria-hidden="true"></span>' +
       '<span class="sh-dock__actions">' +
-        '<a class="sh-dock__btn sh-dock__btn--accent" href="download.html">' + apple + 'App Store</a>' +
-        '<a class="sh-dock__btn sh-dock__btn--ghost" href="download.html">' + play + 'Google Play</a>' +
+        '<a class="sh-dock__btn sh-dock__btn--accent" href="download.html">' + play + 'Download for Android</a>' +
+        '<a class="sh-dock__btn sh-dock__btn--ghost" href="download.html">' + apple + 'iOS waitlist</a>' +
       '</span>' +
       '<button class="sh-dock__close" type="button" aria-label="Dismiss download bar">&times;</button>';
     document.body.appendChild(dock);
@@ -294,6 +294,42 @@
         '<p class="sh-muted">Your message is on its way. We read every note and reply within a morning or two — usually before 9am.</p>';
       form.replaceWith(done);
     });
+  }
+
+  /* ---- Referral copy button ---- */
+  function initReferralCopy() {
+    document.querySelectorAll("[data-sh-copy]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.getAttribute("data-sh-copy");
+        var done = function () {
+          var prev = btn.textContent;
+          btn.textContent = "Copied";
+          setTimeout(function () { btn.textContent = prev; }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(done).catch(done);
+        } else { done(); }
+      });
+    });
+  }
+
+  /* ---- Reckoning countdown clock (Section 07) ---- */
+  function initReckoningClock() {
+    var els = document.querySelectorAll("[data-sh-countdown]");
+    if (!els.length) return;
+    function tick() {
+      var now = new Date();
+      var end = new Date(now); end.setHours(9, 0, 0, 0);
+      if (end <= now) end.setDate(end.getDate() + 1);
+      var diff = Math.max(0, end - now);
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      var str = [h, m, s].map(function (n) { return String(n).padStart(2, "0"); }).join(":");
+      els.forEach(function (el) { el.textContent = str; });
+    }
+    tick();
+    if (!REDUCED) setInterval(tick, 1000);
   }
 
   /* ---- FAQ accordion ---- */
@@ -341,6 +377,8 @@
     initVoices();
     initDock();
     initContactForm();
+    initReferralCopy();
+    initReckoningClock();
   }
 
   if (document.readyState === "loading") {
